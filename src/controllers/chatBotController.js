@@ -2,7 +2,7 @@ require("dotenv").config();
 
 
 let postWebhook = (req, res) => {
-     // Parse the request body from the POST
+    // Parse the request body from the POST
   let body = req.body;
 
   // Check the webhook event is from a Page subscription
@@ -11,7 +11,8 @@ let postWebhook = (req, res) => {
     // Iterate over each entry - there may be multiple if batched
     body.entry.forEach(function(entry) {
 
-       // Gets the body of the webhook event
+      
+      // Gets the body of the webhook event
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
 
