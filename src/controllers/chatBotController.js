@@ -215,7 +215,7 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "elements": [
                         {
                             "title": "Want to build sth awesome?",
-                            "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fthedailycampus&psig=AOvVaw13o3_tgdAOFDGwpdRBAX1d&ust=1617518048678000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMD94s7Z4e8CFQAAAAAdAAAAABAF",
+                            "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
                             "subtitle": "Read more ^^",
                             "buttons": [
                                 {
