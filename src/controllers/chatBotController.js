@@ -167,12 +167,12 @@ function handleMessage(sender_psid, message) {
     // id like button: sticker_id 369239263222822
 
     if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, "Thank you!");
+        callSendAPI(sender_psid, "Thank you for watching my video !!!");
         callSendAPIWithTemplate(sender_psid);
         return;
     }
 
-    let entitiesArr = [ "greetings", "thanks", "bye" ];
+    let entitiesArr = [ "wit$greetings", "wit$thanks", "wit$bye" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstTrait(message.nlp, name);
@@ -185,15 +185,15 @@ function handleMessage(sender_psid, message) {
         //default
         callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
     }else{
-       if(entityChosen === "greetings"){
+       if(entityChosen === "wit$greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by Himel!');
+           callSendAPI(sender_psid,'Hi there! This bot is created by Hary Pham. Watch more videos on HaryPhamDev Channel!');
        }
-       if(entityChosen === "thanks"){
+       if(entityChosen === "wit$thanks"){
            //send thanks message
            callSendAPI(sender_psid,`You 're welcome!`);
        }
-        if(entityChosen === "bye"){
+        if(entityChosen === "wit$bye"){
             //send bye message
             callSendAPI(sender_psid,'bye-bye!');
         }
@@ -215,13 +215,13 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "elements": [
                         {
                             "title": "Want to build sth awesome?",
-                            "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
-                            "subtitle": "Read more ^^",
+                            "image_url": "https://www.nexmo.com/wp-content/uploads/2018/10/build-bot-messages-api-768x384.png",
+                            "subtitle": "Watch more videos on my youtube channel ^^",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "url": "https://thedailycampus.com/",
-                                    "title": "Read now"
+                                    "url": "https://bit.ly/subscribe-haryphamdev",
+                                    "title": "Watch now"
                                 }
                             ]
                         }
