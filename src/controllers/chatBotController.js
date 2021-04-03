@@ -215,13 +215,13 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "elements": [
                         {
                             "title": "Want to new news?",
-                            "image_url": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthedailycampus.com%2Fresources%2Fimg%2Fsitesetup%2F1_1.png&imgrefurl=https%3A%2F%2Fthedailycampus.com%2F&tbnid=0hS4trDz3SkGeM&vet=12ahUKEwjmlbyzuuHvAhVLALcAHaAlDCwQMygBegUIARCmAQ..i&docid=61BVdlg1_9MYwM&w=522&h=179&q=the%20daily%20campus&safe=active&ved=2ahUKEwjmlbyzuuHvAhVLALcAHaAlDCwQMygBegUIARCmAQ",
+                            "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
                             "subtitle": "Watch more News............ ^^",
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "url": "https://thedailycampus.com",
-                                    "title": "Watch now"
+                                    "title": "Read more"
                                 }
                             ]
                         }
