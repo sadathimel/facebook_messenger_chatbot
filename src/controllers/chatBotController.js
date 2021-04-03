@@ -158,92 +158,92 @@ function callSendAPI(sender_psid, response) {
 //     return nlp && nlp.entities && nlp.entities[name] && nlp.entities[name][0];
 // }
 
-function firstTrait(nlp, name) {
-    return nlp && nlp.entities && nlp.traits[name] && nlp.traits[name][0];
-}
+// function firstTrait(nlp, name) {
+//     return nlp && nlp.entities && nlp.traits[name] && nlp.traits[name][0];
+// }
 
-function handleMessage(sender_psid, message) {
-    //handle message for react, like press like button
-    // id like button: sticker_id 369239263222822
+// function handleMessage(sender_psid, message) {
+//     //handle message for react, like press like button
+//     // id like button: sticker_id 369239263222822
 
-    if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, "Thank you !!!");
-        callSendAPIWithTemplate(sender_psid);
-        return;
-    }
+//     if( message && message.attachments && message.attachments[0].payload){
+//         callSendAPI(sender_psid, "Thank you !!!");
+//         callSendAPIWithTemplate(sender_psid);
+//         return;
+//     }
 
-    let entitiesArr = [ "wit$greetings", "wit$thanks", "wit$bye" ];
-    let entityChosen = "";
-    entitiesArr.forEach((name) => {
-        let entity = firstTrait(message.nlp, name);
-        if (entity && entity.confidence > 0.8) {
-            entityChosen = name;
-        }
-    });
+//     let entitiesArr = [ "wit$greetings", "wit$thanks", "wit$bye" ];
+//     let entityChosen = "";
+//     entitiesArr.forEach((name) => {
+//         let entity = firstTrait(message.nlp, name);
+//         if (entity && entity.confidence > 0.8) {
+//             entityChosen = name;
+//         }
+//     });
 
-    if(entityChosen === ""){
-        //default
-        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
-    }else{
-       if(entityChosen === "wit$greetings"){
-           //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by HIMEL.');
-       }
-       if(entityChosen === "wit$thanks"){
-           //send thanks message
-           callSendAPI(sender_psid,`You 're welcome!`);
-       }
-        if(entityChosen === "wit$bye"){
-            //send bye message
-            callSendAPI(sender_psid,'bye-bye!');
-        }
-    }
-}
+//     if(entityChosen === ""){
+//         //default
+//         callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
+//     }else{
+//        if(entityChosen === "wit$greetings"){
+//            //send greetings message
+//            callSendAPI(sender_psid,'Hi there! This bot is created by HIMEL.');
+//        }
+//        if(entityChosen === "wit$thanks"){
+//            //send thanks message
+//            callSendAPI(sender_psid,`You 're welcome!`);
+//        }
+//         if(entityChosen === "wit$bye"){
+//             //send bye message
+//             callSendAPI(sender_psid,'bye-bye!');
+//         }
+//     }
+// }
 
-let callSendAPIWithTemplate = (sender_psid) => {
-    // document fb message template
-    // https://developers.facebook.com/docs/messenger-platform/send-messages/templates
-    let body = {
-        "recipient": {
-            "id": sender_psid
-        },
-        "message": {
-            "attachment": {
-                "type": "template",
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [
-                        {
-                            "title": "Want to new news?",
-                            "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
-                            "subtitle": "Watch more News............ ^^",
-                            "buttons": [
-                                {
-                                    "type": "web_url",
-                                    "url": "https://thedailycampus.com",
-                                    "title": "Read more"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        }
-    };
+// let callSendAPIWithTemplate = (sender_psid) => {
+//     // document fb message template
+//     // https://developers.facebook.com/docs/messenger-platform/send-messages/templates
+//     let body = {
+//         "recipient": {
+//             "id": sender_psid
+//         },
+//         "message": {
+//             "attachment": {
+//                 "type": "template",
+//                 "payload": {
+//                     "template_type": "generic",
+//                     "elements": [
+//                         {
+//                             "title": "Want to new news?",
+//                             "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
+//                             "subtitle": "Watch more News............ ^^",
+//                             "buttons": [
+//                                 {
+//                                     "type": "web_url",
+//                                     "url": "https://thedailycampus.com",
+//                                     "title": "Read more"
+//                                 }
+//                             ]
+//                         }
+//                     ]
+//                 }
+//             }
+//         }
+//     };
 
-    request({
-        "uri": "https://graph.facebook.com/v6.0/me/messages",
-        "qs": { "access_token": process.env.FB_PAGE_TOKEN },
-        "method": "POST",
-        "json": body
-    }, (err, res, body) => {
-        if (!err) {
-            // console.log('message sent!')
-        } else {
-            console.error("Unable to send message:" + err);
-        }
-    });
-};
+//     request({
+//         "uri": "https://graph.facebook.com/v6.0/me/messages",
+//         "qs": { "access_token": process.env.FB_PAGE_TOKEN },
+//         "method": "POST",
+//         "json": body
+//     }, (err, res, body) => {
+//         if (!err) {
+//             // console.log('message sent!')
+//         } else {
+//             console.error("Unable to send message:" + err);
+//         }
+//     });
+// };
 
 module.exports = {
   postWebhook: postWebhook,
