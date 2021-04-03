@@ -214,8 +214,8 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "template_type": "generic",
                     "elements": [
                         {
-                            "title": "Want to build sth awesome?",
-                            "image_url": "https://www.nexmo.com/wp-content/uploads/2018/10/build-bot-messages-api-768x384.png",
+                            "title": "Want to new news?",
+                            "image_url": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthedailycampus.com%2Fresources%2Fimg%2Fsitesetup%2F1_1.png&imgrefurl=https%3A%2F%2Fthedailycampus.com%2F&tbnid=0hS4trDz3SkGeM&vet=12ahUKEwjmlbyzuuHvAhVLALcAHaAlDCwQMygBegUIARCmAQ..i&docid=61BVdlg1_9MYwM&w=522&h=179&q=the%20daily%20campus&safe=active&ved=2ahUKEwjmlbyzuuHvAhVLALcAHaAlDCwQMygBegUIARCmAQ",
                             "subtitle": "Watch more News............ ^^",
                             "buttons": [
                                 {
