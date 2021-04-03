@@ -66,51 +66,51 @@ let getWebhook = (req, res) => {
 };
 
 // Handles messages events
-function handleMessage(sender_psid, received_message) {
-    let response;
-
-    // Check if the message contains text
-    if (received_message.text) {
-
-        // Create the payload for a basic text message
-        response = {
-            "text": `You sent the message: "${received_message.text}". Now send me an image!`
-        }
-    } else if (received_message.attachments) {
-
-    // Gets the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
-        response = {
-            "attachment": {
-                "type": "template",
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                        "title": "Is this the right picture?",
-                        "subtitle": "Tap a button to answer.",
-                        "image_url": attachment_url,
-                        "buttons": [
-                            {
-                                "type": "postback",
-                                "title": "Yes!",
-                                "payload": "yes",
-                            },
-                            {
-                                "type": "postback",
-                                "title": "No!",
-                                "payload": "no",
-                            }
-                        ],
-                    }]
-                }
-            }
-        }
-
-}
-
-// Sends the response message
-    callSendAPI(sender_psid, response);
-}
+// function handleMessage(sender_psid, received_message) {
+//     let response;
+//
+//     // Check if the message contains text
+//     if (received_message.text) {
+//
+//         // Create the payload for a basic text message
+//         response = {
+//             "text": `You sent the message: "${received_message.text}". Now send me an image!`
+//         }
+//     } else if (received_message.attachments) {
+//
+//     // Gets the URL of the message attachment
+//     let attachment_url = received_message.attachments[0].payload.url;
+//         response = {
+//             "attachment": {
+//                 "type": "template",
+//                 "payload": {
+//                     "template_type": "generic",
+//                     "elements": [{
+//                         "title": "Is this the right picture?",
+//                         "subtitle": "Tap a button to answer.",
+//                         "image_url": attachment_url,
+//                         "buttons": [
+//                             {
+//                                 "type": "postback",
+//                                 "title": "Yes!",
+//                                 "payload": "yes",
+//                             },
+//                             {
+//                                 "type": "postback",
+//                                 "title": "No!",
+//                                 "payload": "no",
+//                             }
+//                         ],
+//                     }]
+//                 }
+//             }
+//         }
+//
+// }
+//
+// // Sends the response message
+//     callSendAPI(sender_psid, response);
+// }
 
 // Handles messaging_postbacks events
 function handlePostback(sender_psid, received_postback) {
@@ -154,9 +154,9 @@ function callSendAPI(sender_psid, response) {
     });
 }
 
-function firstTrait(nlp, name) {
-    return nlp && nlp.entities && nlp.entities[name] && nlp.entities[name][0];
-}
+// function firstTrait(nlp, name) {
+//     return nlp && nlp.entities && nlp.entities[name] && nlp.entities[name][0];
+// }
 
 function firstTrait(nlp, name) {
     return nlp && nlp.entities && nlp.traits[name] && nlp.traits[name][0];
@@ -167,7 +167,7 @@ function handleMessage(sender_psid, message) {
     // id like button: sticker_id 369239263222822
 
     if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, "Thank you !!!");
+        callSendAPI(sender_psid, "Thank you!");
         callSendAPIWithTemplate(sender_psid);
         return;
     }
@@ -187,7 +187,7 @@ function handleMessage(sender_psid, message) {
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by HIMEL.');
+           callSendAPI(sender_psid,'Hi there! This bot is created by Himel!');
        }
        if(entityChosen === "thanks"){
            //send thanks message
@@ -214,14 +214,14 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "template_type": "generic",
                     "elements": [
                         {
-                            "title": "Want to new news?",
-                            "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
-                            "subtitle": "Watch more News.........",
+                            "title": "Want to build sth awesome?",
+                            "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fthedailycampus&psig=AOvVaw13o3_tgdAOFDGwpdRBAX1d&ust=1617518048678000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMD94s7Z4e8CFQAAAAAdAAAAABAF",
+                            "subtitle": "Read more ^^",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "url": "https://thedailycampus.com",
-                                    "title": "Read more"
+                                    "url": "https://thedailycampus.com/",
+                                    "title": "Read now"
                                 }
                             ]
                         }
