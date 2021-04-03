@@ -172,7 +172,7 @@ function handleMessage(sender_psid, message) {
         return;
     }
 
-    let entitiesArr = [ "wit$greetings", "wit$thanks", "wit$bye" ];
+    let entitiesArr = [ "greetings", "thanks", "bye" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstTrait(message.nlp, name);
@@ -185,15 +185,15 @@ function handleMessage(sender_psid, message) {
         //default
         callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
     }else{
-       if(entityChosen === "wit$greetings"){
+       if(entityChosen === "greetings"){
            //send greetings message
            callSendAPI(sender_psid,'Hi there! This bot is created by HIMEL.');
        }
-       if(entityChosen === "wit$thanks"){
+       if(entityChosen === "thanks"){
            //send thanks message
            callSendAPI(sender_psid,`You 're welcome!`);
        }
-        if(entityChosen === "wit$bye"){
+        if(entityChosen === "bye"){
             //send bye message
             callSendAPI(sender_psid,'bye-bye!');
         }
@@ -216,7 +216,7 @@ let callSendAPIWithTemplate = (sender_psid) => {
                         {
                             "title": "Want to new news?",
                             "image_url": "https://media-exp1.licdn.com/dms/image/C560BAQHXD8X7v34Ygg/company-logo_200_200/0/1593498509122?e=2159024400&v=beta&t=E5HrJRKPbZFG2U-z9pkOGYXVWRvhvMF8SS1Vo0WdI9w",
-                            "subtitle": "Watch more News............ ^^",
+                            "subtitle": "Watch more News.........",
                             "buttons": [
                                 {
                                     "type": "web_url",
