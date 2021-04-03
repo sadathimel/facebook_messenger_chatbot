@@ -172,7 +172,7 @@ function handleMessage(sender_psid, message) {
         return;
     }
 
-    let entitiesArr = [ "greetings", "thanks", "bye","hi" ];
+    let entitiesArr = [ "greetings", "thanks", "bye" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstTrait(message.nlp, name);
@@ -181,13 +181,13 @@ function handleMessage(sender_psid, message) {
         }
     });
 
-    if(entityChosen === "hi"){
+    if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks","hi" or "bye" to the bot` );
+        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by Himel');
+           callSendAPI(sender_psid,'Hi there! This bot is created by Himel...!');
        }
        if(entityChosen === "thanks"){
            //send thanks message
@@ -196,10 +196,6 @@ function handleMessage(sender_psid, message) {
         if(entityChosen === "bye"){
             //send bye message
             callSendAPI(sender_psid,'bye-bye!');
-        }
-        if(entityChosen === "hi"){
-            //send bye message
-            callSendAPI(sender_psid,'Hi, bro.!');
         }
     }
 }
