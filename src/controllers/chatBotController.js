@@ -167,7 +167,7 @@ function handleMessage(sender_psid, message) {
     // id like button: sticker_id 369239263222822
 
     if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, "Thank you for watching my video !!!");
+        callSendAPI(sender_psid, "Thank you !!!");
         callSendAPIWithTemplate(sender_psid);
         return;
     }
@@ -216,11 +216,11 @@ let callSendAPIWithTemplate = (sender_psid) => {
                         {
                             "title": "Want to build sth awesome?",
                             "image_url": "https://www.nexmo.com/wp-content/uploads/2018/10/build-bot-messages-api-768x384.png",
-                            "subtitle": "Watch more videos on my youtube channel ^^",
+                            "subtitle": "Watch more News............ ^^",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "url": "https://bit.ly/subscribe-haryphamdev",
+                                    "url": "https://thedailycampus.com",
                                     "title": "Watch now"
                                 }
                             ]
