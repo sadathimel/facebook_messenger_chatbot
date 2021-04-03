@@ -162,7 +162,8 @@ function firstTrait(nlp, name) {
     return nlp && nlp.entities && nlp.traits[name] && nlp.traits[name][0];
 }
 
-function handleMessage(sender_psid, message) {
+// function handleMessage(sender_psid, message) {
+function handleMessage(sender_psid, response) {
     //handle message for react, like press like button
     // id like button: sticker_id 369239263222822
 
