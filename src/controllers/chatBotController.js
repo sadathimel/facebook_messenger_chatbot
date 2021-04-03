@@ -167,7 +167,7 @@ function handleMessage(sender_psid, message) {
     // id like button: sticker_id 369239263222822
 
     if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, "Thank you for watching my video !!!");
+        callSendAPI(sender_psid, "Thank you !!!");
         callSendAPIWithTemplate(sender_psid);
         return;
     }
@@ -187,7 +187,7 @@ function handleMessage(sender_psid, message) {
     }else{
        if(entityChosen === "greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by Hary Pham. Watch more videos on HaryPhamDev Channel!');
+           callSendAPI(sender_psid,'Hi there! This bot is created by abc.');
        }
        if(entityChosen === "thanks"){
            //send thanks message
