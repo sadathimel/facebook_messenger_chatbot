@@ -216,11 +216,11 @@ let callSendAPIWithTemplate = (sender_psid) => {
                         {
                             "title": "Want to build sth awesome?",
                             "image_url": "https://www.nexmo.com/wp-content/uploads/2018/10/build-bot-messages-api-768x384.png",
-                            "subtitle": "Watch more videos on my youtube channel ^^",
+                            "subtitle": "Watch more>>",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "url": "https://bit.ly/subscribe-haryphamdev",
+                                    "url": "",
                                     "title": "Watch now"
                                 }
                             ]
