@@ -3,7 +3,7 @@ import request from "request";
 import homepageService from "./homepageService";
 import templateMessage from "./templateMessage";
 
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const PAGE_ACCESS_TOKEN = process.env.FB_PAGE_TOKEN;
 const SECONDARY_RECEIVER_ID = process.env.SECONDARY_RECEIVER_ID;
 const PRIMARY_RECEIVER_ID = process.env.FACEBOOK_APP_ID;
 
