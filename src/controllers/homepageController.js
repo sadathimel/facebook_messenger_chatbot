@@ -3,7 +3,7 @@ import homepageService from "../services/homepageService";
 import chatbotService from "../services/chatbotService";
 import templateMessage from "../services/templateMessage";
 
-const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
+const MY_VERIFY_TOKEN = process.env.MY_VERIFY_FB_TOKEN;
 
 let getHomePage = (req, res) => {
     let facebookAppId = process.env.FACEBOOK_APP_ID;

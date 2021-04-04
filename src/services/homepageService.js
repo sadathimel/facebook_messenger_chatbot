@@ -1,7 +1,7 @@
 require("dotenv").config();
 import request from "request";
 
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const PAGE_ACCESS_TOKEN = process.env.FB_PAGE_TOKEN;
 
 let handleSetupProfileAPI = () => {
     return new Promise((resolve, reject) => {
