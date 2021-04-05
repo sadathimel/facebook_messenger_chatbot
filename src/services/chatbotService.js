@@ -3,7 +3,7 @@ import request from "request";
 import homepageService from "./homepageService";
 import templateMessage from "./templateMessage";
 
-const PAGE_ACCESS_TOKEN = process.env.FB_PAGE_TOKEN;
+const FB_PAGE_TOKEN = process.env.FB_PAGE_TOKEN;
 const SECONDARY_RECEIVER_ID = process.env.SECONDARY_RECEIVER_ID;
 const PRIMARY_RECEIVER_ID = process.env.FACEBOOK_APP_ID;
 
@@ -79,7 +79,7 @@ let sendMessage = (sender_psid, response) => {
             // Send the HTTP request to the Messenger Platform
             request({
                 "uri": "https://graph.facebook.com/v6.0/me/messages",
-                "qs": { "access_token": PAGE_ACCESS_TOKEN },
+                "qs": { "access_token": FB_PAGE_TOKEN },
                 "method": "POST",
                 "json": request_body
             }, (err, res, body) => {
@@ -141,7 +141,7 @@ let passThreadControl = (sender_psid, app) => {
             // Send the HTTP request to the Messenger Platform
             request({
                 "uri": "https://graph.facebook.com/v6.0/me/pass_thread_control",
-                "qs": { "access_token": PAGE_ACCESS_TOKEN },
+                "qs": { "access_token": FB_PAGE_TOKEN },
                 "method": "POST",
                 "json": request_body
             }, (err, res, body) => {
@@ -245,7 +245,7 @@ let takeControlConversation = (sender_psid) =>{
             // Send the HTTP request to the Messenger Platform
             request({
                 "uri": "https://graph.facebook.com/v6.0/me/take_thread_control",
-                "qs": { "access_token": PAGE_ACCESS_TOKEN },
+                "qs": { "access_token": FB_PAGE_TOKEN },
                 "method": "POST",
                 "json": request_body
             }, async (err, res, body) => {
