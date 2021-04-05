@@ -7,17 +7,17 @@ let sendCategoriesTemplate = () =>{
                 "elements": [
                     {
                         "title": "Headphones",
-                        "image_url": "https://bit.ly/imageHeadphones",
+                        "image_url": "",
                         "subtitle": "Bose Noise Cancelling Wireless Bluetooth Headphones",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://bit.ly/webHeadphones",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": "https://bit.ly/webHeadphones",
+                                "url": "",
                                 "title": "View on Website"
                             },
                             {
@@ -29,17 +29,17 @@ let sendCategoriesTemplate = () =>{
                     },
                     {
                         "title": "TV",
-                        "image_url": "https://bit.ly/imageTV",
+                        "image_url": "",
                         "subtitle": "Master of quality & Incredible clarity",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://bit.ly/webTelevision",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": "https://bit.ly/webTelevision",
+                                "url": "",
                                 "title": "View on Website"
                             }, {
                                 "type": "postback",
@@ -50,17 +50,17 @@ let sendCategoriesTemplate = () =>{
                     },
                     {
                         "title": "Playstation",
-                        "image_url": "https://bit.ly/imagePlaystation",
+                        "image_url": "",
                         "subtitle": "Incredible games & Endless entertainment",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://bit.ly/webPlaystation",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": "https://bit.ly/webPlaystation",
+                                "url": "",
                                 "title": "View on Website"
                             }, {
                                 "type": "postback",
@@ -84,17 +84,17 @@ let sendHeadphonesTemplate = () =>{
                 "elements": [
                     {
                         "title": "Sony Noise Cancelling Headphones WH1000XM3",
-                        "image_url": "https://bit.ly/imageHeadphone1a",
+                        "image_url": "",
                         "subtitle": "$348.00",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://bit.ly/viewHeadphone1",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": "https://bit.ly/viewHeadphone1",
+                                "url": "",
                                 "title": "Order now"
                             },
                             {
@@ -111,17 +111,17 @@ let sendHeadphonesTemplate = () =>{
                     },
                     {
                         "title": "Sony WI-1000XM2 Industry Leading Noise Canceling Wireless Behind-Neck",
-                        "image_url": "https://bit.ly/imageHeadphone1b",
+                        "image_url": "",
                         "subtitle": "$298.00",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://bit.ly/viewHeadphone2",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": "https://bit.ly/viewHeadphone2",
+                                "url": "",
                                 "title": "Order now"
                             },
                             {
@@ -138,17 +138,17 @@ let sendHeadphonesTemplate = () =>{
                     },
                     {
                         "title": "Sony Wireless in-Ear Headset",
-                        "image_url": "https://bit.ly/imageHeadphone1c",
+                        "image_url": "",
                         "subtitle": "$38.00",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://bit.ly/viewHeadphone3",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": "https://bit.ly/viewHeadphone3",
+                                "url": "",
                                 "title": "Order now"
                             },
                             {

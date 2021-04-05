@@ -13,7 +13,7 @@ let sendMessageWelcomeNewUser = (sender_psid) => {
             let username = await homepageService.getFacebookUsername(sender_psid);
             //send text message
             let response1 = {
-                "text": `Hi ${username}! Welcome to Tech Shop Haryphamdev, where you will find what you need.`
+                "text": `Hi ${username}! Welcome, where you will find what you need.`
             };
 
             //send an image
@@ -21,7 +21,7 @@ let sendMessageWelcomeNewUser = (sender_psid) => {
                 "attachment": {
                     "type": "image",
                     "payload": {
-                        "url": "https://bit.ly/imageWelcome"
+                        "url": ""
                     }
                 }
             };
