@@ -8,8 +8,8 @@ import bodyParser from "body-parser";
 let app = express();
 
 //config body-parser to post data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 //config view engine
 configViewEngine(app);

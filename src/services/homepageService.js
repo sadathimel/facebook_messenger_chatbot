@@ -33,13 +33,13 @@ let handleSetupProfileAPI = () => {
                                     {
                                         "type": "web_url",
                                         "title": "View Facebook Fan Page",
-                                        "url": "https://www.facebook.com/haryphamdev",
+                                        "url": "https://www.faceboook.com",
                                         "webview_height_ratio": "full"
                                     },
                                     {
                                         "type": "web_url",
                                         "title": "View Youtube channel",
-                                        "url": "https://bit.ly/subscribe-haryphamdev",
+                                        "url": "https://thedailycampus.com/",
                                         "webview_height_ratio": "full"
                                     },
                                 ]
@@ -48,7 +48,7 @@ let handleSetupProfileAPI = () => {
                     }
                 ],
                 "whitelisted_domains": [
-                    "https://tech-shop-haryphamdev.herokuapp.com/"
+                    "https://thedailycampus.com/"
                 ]
             };
             // Send the HTTP request to the Messenger Platform
